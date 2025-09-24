@@ -157,3 +157,42 @@
   inline-size: 130px;
   block-size: 100%;
 }
+
+.footer {
+  margin: 0 auto;
+  padding: 0 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--card-background-color);
+  padding: 17px;
+  gap: 8px;
+}
+
+.footer__message-image {
+  inline-size: var(--floppy-icon-size);
+  block-size: var(--floppy-icon-size);
+}
+
+.footer__message-image > svg {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+}
+
+@media (width >= 1200px) {
+
+  :root {
+    --floppy-icon-size: 21px;
+  }
+
+  .footer__button-container {
+    flex-direction: row;
+  }
+}
