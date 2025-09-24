@@ -11,6 +11,53 @@
 */
 
 .page {
+  color: var(--main-color);
+  font-family: var(--main-font), sans-serif;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--card-title-font-weight);
+  block-size: 100vh;
+  inline-size: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+  border: 2px solid var(--main-color);
+  background-color: white;
+  inline-size: clamp(320px, 100%, 700px);
+  block-size: clamp(327px, 327px, 368px);
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  display: inline-block;
+  font-family: var(--accent-font), sans-serif;
+  color: inherit;
+  font-weight: 400;
+  font-size: 49px;
+  font-style: normal;
+  line-height: 49px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header__slogan {
+  font-family: var(--accent-font), sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: inherit;
+  text-align: center;
+}
+
+.card__image {
+  inline-size: 100%;
 }
