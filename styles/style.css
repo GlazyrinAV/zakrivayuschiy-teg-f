@@ -163,7 +163,7 @@
   (text-stroke: 1px rgba(255, 255, 255, 1)) or
     (-webkit-text-stroke: 1px rgba(255, 255, 255, 1))
 ) {
-  
+
   .card__watermark {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--watermark-border-color);
@@ -216,6 +216,11 @@
   margin: 0 var(--main-margin) var(--main-margin) 0;
   inline-size: 169px;
   block-size: 38px;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -316,7 +321,7 @@
 }
 
 @media (width > 376px) {
-
+  
   :root {
     --floppy-icon-size: 21px;
   }
