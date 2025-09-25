@@ -93,11 +93,12 @@
 
 .card__image-container {
   position: relative;
+  border-bottom: var(--card-border);
+  overflow: hidden;
 }
 
 .card__image {
   display: block;
-  border-bottom: var(--card-border);
   object-fit: cover;
   inline-size: 100%;
 }
@@ -133,6 +134,34 @@
     -webkit-text-stroke: 1px var(--watermark-border-color);
     text-stroke: 1px var(--watermark-border-color);
   }
+}
+
+.sprint-1-blanc-image {
+  filter: grayscale(0.5);
+}
+
+.sprint-1-fear-image {
+  filter: saturate(150%);
+}
+
+.sprint-2-chase-image {
+  filter: sepia(80%);
+}
+
+.sprint-2-around-image {
+  filter: hue-rotate(270deg);
+}
+
+.sprint-3-strategy-image {
+  filter: invert() brightness(0.5);
+}
+
+.sprint-3-no-hands-image {
+  filter: blur(10px);
+}
+
+.sprint-4-now-image {
+  filter: brightness(0.7) blur(2px) hue-rotate(90deg);
 }
 
 .card__description {
