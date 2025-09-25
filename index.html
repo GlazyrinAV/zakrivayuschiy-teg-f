@@ -307,9 +307,13 @@
       </section>
     </main>
     <footer class="footer">
-      <button class="button footer__button">
+      <button
+        class="button footer__button"
+        onclick="window['footer__message'].showModal()"
+        aria-controls="footer__message"
+      >
         <div class="footer__button-container">
-          <div class="footer__message-image">
+          <div class="footer__button-image">
             <svg viewBox="0 0 28 28">
               <use href="./svg/floppy.svg#floppy" />
             </svg>
@@ -317,15 +321,23 @@
           <span class="footer__button-title">Сохранить на память</span>
         </div>
       </button>
-      <dialog class="footer__message">
-        <div class="footer__message-image-container">
-          <svg class="footer__message-image">
-            <use href="./svg/floppy.svg#floppy" />
-          </svg>
+      <dialog class="footer__message" id="footer__message">
+        <div class="footer__message-container">
+          <div class="footer__message-image">
+            <svg viewBox="0 0 28 28">
+              <use href="./svg/floppy.svg#floppy" />
+            </svg>
+          </div>
+          <p class="footer__message-description">
+            Вставьте дискету, чтобы продолжить
+          </p>
         </div>
-        <img />
-        <p class="footer__message-description"></p>
-        <button class="button footer__message-button"></button>
+        <button
+          class="button footer__message-button"
+          onclick="window['footer__message'].close()"
+        >
+          ок
+        </button>
       </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
