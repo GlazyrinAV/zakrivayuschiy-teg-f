@@ -33,6 +33,15 @@
   font-style: normal;
   line-height: 90%;
   text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--main-color);
 }
 
 .header {
@@ -183,9 +192,23 @@
   block-size: 38px;
 }
 
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--card-border);
+}
+
 .card__like-button {
   inline-size: 130px;
   block-size: 100%;
+}
+
+.card__like-button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 .footer {
