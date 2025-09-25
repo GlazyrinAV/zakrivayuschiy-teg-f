@@ -25,7 +25,9 @@
 }
 
 .button {
+  position: relative;
   border: var(--card-border);
+  overflow: hidden;
   color: inherit;
   font-family: var(--accent-font), sans-serif;
   font-weight: 400;
@@ -34,6 +36,7 @@
   line-height: 90%;
   text-align: center;
   transition: box-shadow 0.3s ease;
+  inline-size: 100%;
 }
 
 .button:focus {
@@ -42,6 +45,29 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--main-color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: block;
+  border: var(--card-border);
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button:hover::before {
+  transform: translateX(100%);
+}
+
+.button__text {
+  color: white;
+  mix-blend-mode: difference;
 }
 
 .header {
@@ -137,7 +163,7 @@
   (text-stroke: 1px rgba(255, 255, 255, 1)) or
     (-webkit-text-stroke: 1px rgba(255, 255, 255, 1))
 ) {
-
+  
   .card__watermark {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--watermark-border-color);
@@ -205,18 +231,13 @@
   block-size: 100%;
 }
 
-.card__like-button:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 0 0 100px;
+  max-inline-size: 306px;
 }
 
 .footer__button-container {
@@ -229,8 +250,10 @@
 }
 
 .footer__button-image {
+  fill: white;
   inline-size: var(--floppy-icon-size);
   block-size: var(--floppy-icon-size);
+  mix-blend-mode: difference;
 }
 
 .footer__button-image > svg {
@@ -264,8 +287,10 @@
 
 .footer__message-image > svg {
   object-fit: contain;
+  fill: white;
   inline-size: 100%;
   block-size: 100%;
+  mix-blend-mode: difference;
 }
 
 .footer__message-description {
@@ -294,6 +319,10 @@
 
   :root {
     --floppy-icon-size: 21px;
+  }
+
+  .footer {
+    max-inline-size: 335px;
   }
 
   .footer__button-container {

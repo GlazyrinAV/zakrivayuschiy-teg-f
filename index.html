@@ -314,11 +314,13 @@
       >
         <div class="footer__button-container">
           <div class="footer__button-image">
-            <svg viewBox="0 0 28 28">
+            <svg viewBox="0 0 28 28" fill="black">
               <use href="./svg/floppy.svg#floppy" />
             </svg>
           </div>
-          <span class="footer__button-title">Сохранить на память</span>
+          <span class="footer__button-title button__text"
+            >Сохранить на память</span
+          >
         </div>
       </button>
       <dialog class="footer__message" id="footer__message">
@@ -336,7 +338,7 @@
           class="button footer__message-button"
           onclick="window['footer__message'].close()"
         >
-          ок
+          <span class="button__text">ок</span>
         </button>
       </dialog>
     </footer>
