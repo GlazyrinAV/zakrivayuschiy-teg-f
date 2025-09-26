@@ -7,6 +7,7 @@
   --card-description-font-weight: 715;
   --main-font-size: 14px;
   --main-color: #000;
+  --main-animation-color: #fff;
   --watermark-border-color: rgb(255 255 255 / 1);
   --background-image:
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
@@ -17,4 +18,11 @@
   --card-border: 2px solid var(--main-color);
   --main-margin: 25px;
   --floppy-icon-size: 28px;
+  --heart-icon-contour: #000;
+  --heart-icon-sparks: #f00;
+  --heart-icon-core: transparent;
+  --heart-icon-main-body: transparent;
+  --animation-fill-color: #f00;
+  --animation-hover-color: #000;
+  --animation-active-color: #f00;
 }

@@ -1,5 +1,5 @@
 <svg viewBox="0 0 29 28" fill="white" xmlns="http://www.w3.org/2000/svg">
-<g id="floppy">
+<symbol id="floppy">
 <rect id="Rectangle 18" x="0.5" width="2.15385" height="2.15385" fill="white" fill-rule="evenodd"/>
 <rect id="Rectangle 17" x="0.5" y="2.1543" width="2.15385" height="2.15385" fill="white" />
 <rect id="Rectangle 19" x="0.5" y="4.30762" width="2.15385" height="2.15385" fill="white"/>
@@ -80,5 +80,5 @@
 <rect id="Rectangle 50" x="28.5" y="10.7695" width="2.15385" height="2.15385" transform="rotate(-180 28.5 10.7695)" fill="white"/>
 <rect id="Rectangle 51" x="28.5" y="8.61523" width="2.15385" height="2.15385" transform="rotate(-180 28.5 8.61523)" fill="white"/>
 <rect id="Rectangle 52" x="28.5" y="6.46191" width="2.15385" height="2.15385" transform="rotate(-180 28.5 6.46191)" fill="white"/>
-</g>
+</symbol>
 </svg>
