@@ -34,7 +34,7 @@
   border: var(--card-border, 2px solid var(--main-color, #000));
   overflow: hidden;
   color: inherit;
-  font-family: var(--accent-font, 'PressStart2P-Regular'), sans-serif;
+  font-family: var(--accent-font, 'PressStart2P'), fantasy, sans-serif;
   font-weight: var(--accent-regular-font-weight, 400);
   font-size: inherit;
   font-style: normal;
@@ -119,7 +119,7 @@ body:has(.like-icon:hover) .core {
 }
 
 body:has(.like-icon:hover) .main-body {
-  fill: var(--animation-hover-color #000);
+  fill: var(--animation-hover-color, #000);
   transition-delay: 0.05s;
 }
 
@@ -157,15 +157,15 @@ body:has(.like-icon.is-liked:hover) .main-body {
   align-items: center;
   margin: 100px auto;
   border: var(--card-border, 2px solid var(--main-color, #000));
+  padding: 122px 0;
   background-color: var(--card-background-color, #fff);
   inline-size: var(--card-inline-size, clamp(320px, 100%, 700px));
-  padding: 122px 0;
 }
 
 .main-title {
   margin-bottom: 18px;
   color: inherit;
-  font-family: var(--accent-font, 'PressStart2P-Regular'), sans-serif;
+  font-family: var(--accent-font, 'PressStart2P'), fantasy, sans-serif;
   font-weight: var(--accent-regular-font-weight, 400);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
@@ -175,7 +175,7 @@ body:has(.like-icon.is-liked:hover) .main-body {
 
 .header__slogan {
   color: inherit;
-  font-family: var(--accent-font, 'PressStart2P-Regular'), sans-serif;
+  font-family: var(--accent-font, 'PressStart2P'), fantasy, sans-serif;
   font-weight: var(--accent-regular-font-weight, 400);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
@@ -195,9 +195,9 @@ body:has(.like-icon.is-liked:hover) .main-body {
 
 .sub-title {
   border-bottom: var(--card-border, 2px solid var(--main-color, #000));
-  padding: 4px 10px;
+  padding: 3px 10px;
   color: inherit;
-  font-family: inherit;
+  font-family: inherit, sans-serif;
   font-size: var(--card-font-size, 18px);
   font-style: normal;
   line-height: 22px;
@@ -215,6 +215,7 @@ body:has(.like-icon.is-liked:hover) .main-body {
 .card__image {
   display: block;
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
 }
 
@@ -225,7 +226,7 @@ body:has(.like-icon.is-liked:hover) .main-body {
   z-index: 1;
   opacity: 0.5;
   color: inherit;
-  font-family: var(--accent-font, 'PressStart2P-Regular');
+  font-family: var(--accent-font, 'PressStart2P'), fantasy, sans-serif;
   font-weight: var(--accent-regular-font-weight, 400);
   font-size: inherit;
   font-style: normal;
@@ -251,38 +252,38 @@ body:has(.like-icon.is-liked:hover) .main-body {
   }
 }
 
-.sprint-1-blanc-image {
+.filter-grayscale {
   filter: grayscale(0.5);
 }
 
-.sprint-1-fear-image {
+.filter-saturate {
   filter: saturate(150%);
 }
 
-.sprint-2-chase-image {
+.filter-sepia {
   filter: sepia(80%);
 }
 
-.sprint-2-around-image {
+.filter-hue-rotate {
   filter: hue-rotate(270deg);
 }
 
-.sprint-3-strategy-image {
+.filter-negative {
   filter: invert() brightness(0.5);
 }
 
-.sprint-3-no-hands-image {
+.filter-blur {
   filter: blur(10px);
 }
 
-.sprint-4-now-image {
+.filter-mixed {
   filter: brightness(0.7) blur(2px) hue-rotate(90deg);
 }
 
 .card__description {
   padding: var(--main-margin, 25px) var(--main-margin, 25px) 0;
   color: inherit;
-  font-family: inherit;
+  font-family: inherit, sans-serif;
   font-size: var(--card-font-size, 18px);
   font-style: normal;
   line-height: 117%;
@@ -303,7 +304,6 @@ body:has(.like-icon.is-liked:hover) .main-body {
   align-self: flex-end;
   margin: 0 var(--main-margin, 25px) var(--main-margin, 25px) 0;
   inline-size: 177;
-  block-size: 38px;
 }
 
 .card__icon-button {
@@ -324,11 +324,12 @@ body:has(.like-icon.is-liked:hover) .main-body {
 }
 
 .card__like-button {
+  padding: 11px 0;
   inline-size: 130px;
   block-size: 100%;
 }
 
-.footer {
+.save-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +338,7 @@ body:has(.like-icon.is-liked:hover) .main-body {
   max-inline-size: 306px;
 }
 
-.footer__button {
+.save-content__button {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,30 +347,29 @@ body:has(.like-icon.is-liked:hover) .main-body {
   background-color: var(--card-background-color, #fff);
 }
 
-.footer__button-image {
+.save-content__button-image {
   fill: var(--button-text-animation-color, #fff);
   inline-size: var(--floppy-icon-size, 28px);
-  block-size: var(--floppy-icon-size, 28px);
   mix-blend-mode: difference;
 }
 
-.footer__button-image > svg {
+.save-content__button-image > svg {
   object-fit: contain;
   inline-size: 100%;
   block-size: 100%;
 }
 
-.footer__message {
+.save-content__message {
   border: var(--card-border);
   padding: 30px 40px;
   max-inline-size: 341px;
 }
 
-.footer__message::backdrop {
+.save-content__message::backdrop {
   background-color: var(--message-backdrop-color, rgb(0 0 0 / 0.75));
 }
 
-.footer__message-container {
+.save-content__message-container {
   display: grid;
   grid-template-columns: min-content 1fr;
   align-items: center;
@@ -377,12 +377,11 @@ body:has(.like-icon.is-liked:hover) .main-body {
   margin-bottom: 30px;
 }
 
-.footer__message-image {
+.save-content__message-image {
   inline-size: 39px;
-  block-size: 39px;
 }
 
-.footer__message-image > svg {
+.save-content__message-image > svg {
   object-fit: contain;
   fill: var(--button-text-animation-color, #fff);
   inline-size: 100%;
@@ -390,9 +389,9 @@ body:has(.like-icon.is-liked:hover) .main-body {
   mix-blend-mode: difference;
 }
 
-.footer__message-description {
+.save-content__message-description {
   color: inherit;
-  font-family: var(--accent-font, 'PressStart2P-Regular');
+  font-family: var(--accent-font, 'PressStart2P'), fantasy, sans-serif;
   font-weight: var(--accent-regular-font-weight, 400);
   font-size: inherit;
   font-style: normal;
@@ -400,16 +399,16 @@ body:has(.like-icon.is-liked:hover) .main-body {
   text-transform: uppercase;
 }
 
-.footer__message-button {
+.save-content__message-button {
+  padding: 11px 0;
   color: inherit;
-  font-family: var(--accent-font, 'PressStart2P-Regular');
+  font-family: var(--accent-font, 'PressStart2P'), fantasy, sans-serif;
   font-weight: var(--accent-regular-font-weight, 400);
   font-size: inherit;
   font-style: normal;
   line-height: 90%;
   text-transform: uppercase;
   inline-size: 100%;
-  block-size: 38px;
 }
 
 @media (width > 376px) {
@@ -430,15 +429,15 @@ body:has(.like-icon.is-liked:hover) .main-body {
     margin: 0 auto 51px;
   }
 
-  .footer {
+  .save-content {
     max-inline-size: 335px;
   }
 
-  .footer__button {
+  .save-content__button {
     flex-direction: row;
   }
 
-  .footer__message {
+  .save-content__message {
     padding: 30px;
     max-inline-size: 353px;
   }
